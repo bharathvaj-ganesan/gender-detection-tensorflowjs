@@ -148,4 +148,10 @@ img {
 	max-height: 500px;
 	max-width: 600px;
 }
+@media only screen and (max-width: 600px) {
+	img {
+		max-height: 400px;
+		max-width: 300px;
+	}
+}
 </style>
