@@ -2,7 +2,7 @@
 
 Detect gender using tensorflowjs.
 
-![alt text](./preview.jpg)
+![Preview Image](preview.gif)
 
 > Uses [Gender classification model](https://github.com/arunponnusamy/gender-classification) by [arunponnusamy](https://github.com/arunponnusamy)
 
@@ -12,15 +12,16 @@ Detect gender using tensorflowjs.
 2.  Loads gender model using [Tensorflow.js](https://js.tensorflow.org)
 3.  Based on the confidence value we choose Man / woman
 
-## Notes
 
-Gender detection model is not a well trained model. So accuracy will be a bit low.
+
+> Gender detection model used here is not a well trained model. So accuracy will be a bit low.
 
 ## Project setup
 
+### Installs dependencies
 ```
 yarn install
-``
+```
 
 
 ### Compiles and hot-reloads for development
@@ -35,11 +36,4 @@ yarn run serve
 yarn run build
 
 ```
-### Lints and fixes files
-```
 
-yarn run lint
-
-```
-
-```
