@@ -547,7 +547,7 @@
 			}).$mount('#app');
 	},
 	zPtt: function(e, t, n) {
-		e.exports = n.p + '/img/placeholder.386e9382.svg';
+		e.exports = 'img/placeholder.386e9382.svg';
 	}
 });
 //# sourceMappingURL=app.4889d70c.js.map
