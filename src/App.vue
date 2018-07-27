@@ -21,6 +21,7 @@
         &copy;2018 — <strong><a class="white--text" target ="_blank" href="https://bharathvajganesan.me">bharathvajganesan</a></strong>
       </v-flex>
     </v-footer>
+    <a href="https://github.com/bharathvaj1995/gender-detection-tensorflowjs"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1200" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
   </v-app>
 </template>
 
