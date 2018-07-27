@@ -92,7 +92,16 @@ export default {
 		});
 	},
 	methods: {
+		reset() {
+			this.selectedImage = null;
+			this.faceImage = null;
+			this.genderModel = null;
+			this.gender = null;
+			this.processing = false;
+			this.enable = false;
+		},
 		onImageSelect() {
+			this.reset();
 			this.processing = true;
 			this.gender = 'Processing ...';
 			this.$refs.fileInput.click();
