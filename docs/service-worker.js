@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.d554f6de88c87d1da77fc4d49dc196cf.js"
+  "/precache-manifest.7df3d8ade7b980da592af222a811a69d.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "gender-detection"});

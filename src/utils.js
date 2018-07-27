@@ -39,7 +39,7 @@ function resizeImage(imageData) {
 }
 
 function loadModel() {
-	return tf.loadModel('/gender/model.json');
+	return tf.loadModel('gender/model.json');
 }
 
 function saveModelToLocalStorage(model) {
