@@ -5,11 +5,21 @@
         <v-container grid-list-md >
           <v-layout row wrap>
              <v-flex xs12 sm8 offset-sm2>
-                <h4 class="display-2" :style="{ color: genderColor}" v-if="!showPlaceholder">{{gender}}</h4>
-                <input type="file" ref="fileInput" @change="onImageSelected" hidden accept="image/*"/>
-                <img :src="selectedImage" @load="imageLoaded" ref="preview" v-if="!showPlaceholder"/>
-                <img src="../assets/placeholder.svg" v-if="showPlaceholder"/><br>
-                <v-btn color="success" large dark outline  @click="onImageSelect" :disabled="!enable">Upload Image</v-btn>
+				<div v-if="!enable">
+					<v-progress-circular
+						:size="100"
+						color="primary"
+						indeterminate
+						></v-progress-circular>
+						<h2 class="primary--text">Loading ... Please Wait</h2>
+				</div>
+				<div v-else>
+					<h4 class="display-2" :style="{ color: genderColor}" v-if="!showPlaceholder">{{gender}}</h4>
+					<input type="file" ref="fileInput" @change="onImageSelected" hidden accept="image/*"/>
+					<img :src="selectedImage" @load="imageLoaded" ref="preview" v-if="!showPlaceholder"/>
+					<img src="../assets/placeholder.svg" v-if="showPlaceholder"/><br>
+					<v-btn color="success" large dark outline  @click="onImageSelect">Upload Image</v-btn>
+				</div>
             </v-flex>
           </v-layout>
         </v-container>
