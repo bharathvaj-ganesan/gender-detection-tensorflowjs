@@ -1,28 +1,47 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-toolbar
+    dark color="primary"
+      app
+    >
+      <v-toolbar-title v-text="title"></v-toolbar-title>
+    </v-toolbar>
+    <v-content>
+      <GenderDetect/>
+    </v-content>
+    <v-footer :fixed="true" app>
+       <v-flex
+        primary
+        lighten-2
+        py-3
+        text-xs-center
+        white--text
+        xs12
+      >
+        &copy;2018 — <strong><a class="white--text" target ="_blank" href="https://bharathvajganesan.me">bharathvajganesan</a></strong>
+      </v-flex>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import GenderDetect from './components/GenderDetect';
 
 export default {
-  name: "app",
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		GenderDetect
+	},
+	data() {
+		return {
+			items: [
+				{
+					icon: 'bubble_chart',
+					title: 'Inspire'
+				}
+			],
+			title: 'Gender Detection'
+		};
+	}
 };
 </script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
