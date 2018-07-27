@@ -112,10 +112,12 @@ export default {
 			this.findFace();
 		},
 		findFace() {
+			this.gender = 'Finding Face ...';
 			const tracker = new tracking.ObjectTracker('face');
 			tracker.setStepSize(1.7);
 			tracking.track(this.$refs.preview, tracker);
 			tracker.on('track', event => {
+				this.gender = 'Processing Face ...';
 				event.data.forEach(rect => {
 					const faceImageData = utils.getImagePortion(
 						this.$refs.preview,
