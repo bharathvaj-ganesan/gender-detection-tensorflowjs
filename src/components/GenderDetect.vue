@@ -9,7 +9,7 @@
                 <input type="file" ref="fileInput" @change="onImageSelected" hidden accept="image/*"/>
                 <img :src="selectedImage" @load="imageLoaded" ref="preview" v-if="!showPlaceholder"/>
                 <img src="../assets/placeholder.svg" v-if="showPlaceholder"/><br>
-                <v-btn color="success" large dark outline  @click="onImageSelect">Upload Image</v-btn>
+                <v-btn color="success" large dark outline  @click="onImageSelect" :disabled="!enable">Upload Image</v-btn>
             </v-flex>
           </v-layout>
         </v-container>
@@ -29,7 +29,8 @@ export default {
 			faceImage: null,
 			genderModel: null,
 			gender: null,
-			processing: false
+			processing: false,
+			enable: false
 		};
 	},
 	computed: {
@@ -72,6 +73,7 @@ export default {
 				.loadModel()
 				.then(genderModel => {
 					this.genderModel = genderModel;
+					this.enable = true;
 				})
 				.catch(err => {
 					alert('Something went wrong in loading model. Please raise a github issue.');
