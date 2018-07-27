@@ -12,9 +12,9 @@ Detect gender using tensorflowjs.
 2.  Loads gender model using [Tensorflow.js](https://js.tensorflow.org)
 3.  Based on the confidence value we choose Man / woman
 
-## Notes
 
-Gender detection model is not a well trained model. So accuracy will be a bit low.
+
+> Gender detection model used here is not a well trained model. So accuracy will be a bit low.
 
 ## Project setup
 
