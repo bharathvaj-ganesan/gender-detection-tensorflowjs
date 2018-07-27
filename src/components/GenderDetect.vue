@@ -73,7 +73,8 @@ export default {
 				})
 				.catch(err => {
 					this.processing = false;
-					alert('Something not right');
+					console.log(err);
+					// alert('Something not right');
 				});
 		}
 	},
@@ -86,7 +87,7 @@ export default {
 					this.enable = true;
 				})
 				.catch(err => {
-					alert('Something went wrong in loading model. Please raise a github issue.');
+					// alert('Something went wrong in loading model. Please raise a github issue.');
 					console.log(err);
 				});
 		});
@@ -95,10 +96,8 @@ export default {
 		reset() {
 			this.selectedImage = null;
 			this.faceImage = null;
-			this.genderModel = null;
 			this.gender = null;
 			this.processing = false;
-			this.enable = false;
 		},
 		onImageSelect() {
 			this.reset();
