@@ -4,7 +4,7 @@ Detect gender using tensorflowjs.
 
 ![Preview Image](preview.gif)
 
-> Uses [Gender classification model](https://github.com/arunponnusamy/gender-classification) by [arunponnusamy](https://github.com/arunponnusamy)
+> Uses [Gender classification model](https://github.com/arunponnusamy/gender-detection-keras) by [arunponnusamy](https://github.com/arunponnusamy)
 
 ## Processing Steps
 
